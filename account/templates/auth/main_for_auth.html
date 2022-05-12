@@ -1,0 +1,39 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <title>main</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="logo_text">SPACEWORK</h1>
+        <div class="ent_reg">
+            <a class="enter" href="{%  url 'login' %}">вход</a>
+            <a class="register" href="{% url 'register' %}">регистрация</a>
+        </div>
+    </div>
+
+    <div class="mainspace">
+        <div class="menu">
+            <p class="menu_name">Меню</p>
+            <div class="menu_title">
+                <p class="space_name">Необходимо авторизоваться</p>
+            </div>
+        </div>
+
+        <div class="space">
+
+        </div>
+    </div>
+    {% block login %}{% endblock %}
+    {% block register %}{% endblock %}
+    {% block script %}{% endblock %}
+</body>
+
+</html>

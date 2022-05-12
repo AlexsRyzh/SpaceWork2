@@ -1,0 +1,802 @@
+* {
+    margin: 0px;
+    font-size: 26px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background-color: rgb(214, 214, 214);
+    overflow-x: hidden;
+}
+
+.item {
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 3px solid rgb(118, 131, 171);
+    background-color: white;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.item_bot {
+    margin-top: 3px;
+    display: inline-flex;
+}
+
+.date {
+    background-color: rgb(196, 196, 196);
+    width: 137px;
+    padding-left: 5px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 15px;
+}
+
+.item_title {
+    margin: 3px 3px 0px 5px;
+}
+
+.delete_btn:before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 0;
+    background: rgba(118, 131, 171, 0.24);
+    border-radius: 5px;
+    transition: all 0s ease;
+    cursor: pointer;
+}
+
+.delete_btn:hover:before {
+    height: 32px;
+}
+
+.delete_btn {
+    float: right;
+    margin: 0px;
+    margin-right: 3px;
+    padding: 0px;
+    outline: none;
+    border: 0;
+    background: transparent;
+    margin-top: 1px;
+    margin-bottom: -6px;
+}
+
+.edit_btn:before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 0;
+    background: rgba(118, 131, 171, 0.24);
+    border-radius: 5px;
+    transition: all 0s ease;
+    cursor: pointer;
+}
+
+.edit_btn:hover:before {
+    height: 32px;
+}
+
+.edit_btn {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    border: 0;
+    background: transparent;
+    margin-top: 1px;
+    margin-bottom: -6px;
+}
+
+.top_btns {
+    border: 3px solid rgb(118, 131, 171);
+    float: right;
+    margin-right: -3px;
+    margin-top: -6px;
+    margin-left: 3px;
+    width: 70px;
+    border-radius: 10px;
+}
+
+.isDone {
+    width: 36px;
+    height: 36px;
+    margin-top: -1px;
+    margin-left: 207px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: rgb(196, 196, 196);
+    border-radius: 30%;
+}
+
+.isDone:hover {
+    cursor: pointer;
+    border: 3px solid rgb(48, 68, 127);
+    border-width: 3px;
+}
+
+
+.isDone:checked {
+    background-color: rgb(118, 212, 189);
+}
+
+.header {
+    height: 70px;
+    background-color: rgb(20, 43, 111);
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+.logo_text {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
+    padding-left: 300px;
+    padding-right: 20px;
+}
+
+.enter {
+    margin-right: 10px;
+    color: white;
+    background-color: rgb(39, 60, 122);
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+}
+
+.header_username {
+    margin-right: 10px;
+    color: white;
+    background-color: rgb(39, 60, 122);
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+}
+
+.enter:hover {
+    background-color: white;
+    color: rgb(20, 43, 111);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.register {
+    margin-right: 10px;
+    color: white;
+    background-color: rgb(39, 60, 122);
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+}
+
+.register:hover {
+    background-color: white;
+    color: rgb(20, 43, 111);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.ent_reg {
+    display: flex;
+}
+
+.mainspace {
+    display: flex;
+}
+
+
+.space {
+    margin-top: 40px;
+    position: absolute;
+    margin-left: 300px;
+    width: calc(100% - 240px);
+    display: flex;
+    overflow-x: auto;
+    height: calc(100% - 110px);
+}
+
+.left_list {
+    margin-left: 100px;
+}
+
+.middle_list {
+    margin-left: 100px;
+}
+
+.rigth_list {
+    margin-left: 100px;
+    margin-right: 170px;
+}
+
+.menu {
+    position: absolute;
+    height: calc(100% - 70px);
+    width: 300px;
+    background-color: rgb(235, 235, 235);
+}
+
+.list_title {
+    color: rgb(48, 68, 127);
+    text-align: center;
+    font-size: 35px;
+}
+
+.space_name {
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 34px;
+}
+
+.space_name_not_login {
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 34px;
+}
+
+.space_name:hover {
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.space_names {
+    margin-top: 30px;
+}
+
+.menu_name {
+    color: rgb(48, 68, 127);
+    text-align: center;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+#enter_blackout {
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+#enter_window {
+    width: 300px;
+    height: 370px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0px 10px rgba(20, 43, 111, 1), 0 0px 10px rgba(20, 43, 111, 0.2);
+    border-radius: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: rgb(246, 246, 246);
+}
+
+#register_blackout {
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+#register_window {
+    width: 300px;
+    height: 420px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0px 10px rgba(20, 43, 111, 1), 0 0px 10px rgba(20, 43, 111, 0.2);
+    border-radius: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: rgb(246, 246, 246);
+}
+
+.enter_login {
+    width: 280px;
+    padding-left: 20px;
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.enter_login:focus {
+    outline: none;
+}
+
+.enter_password {
+    width: 280px;
+    padding-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.enter_password:focus {
+    outline: none;
+}
+
+.enter_title {
+    margin-top: 10px;
+    color: rgb(41, 62, 123);
+    font-size: 35px;
+}
+
+.enter_save_remember {
+    margin-top: 10px;
+    display: flex;
+}
+
+.saveme_cb {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.saveme_cb:hover {
+    cursor: pointer;
+}
+
+#saveme_text {
+    padding-top: 2px;
+    font-size: 16px;
+}
+
+#saveme_text:hover {
+    cursor: pointer;
+}
+
+.forgot_password {
+    color: rgb(41, 62, 123);
+    margin-left: 25px;
+    padding-top: 2px;
+    font-size: 16px;
+}
+
+.register_acc {
+    margin-top: 10px;
+    color: rgb(41, 62, 123);
+    font-size: 16px;
+}
+
+.enter_btn {
+    width: 100px;
+    padding-left: 117px;
+    padding-right: 117px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(20, 43, 111);
+    color: white;
+    font-size: 24px;
+}
+
+.enter_btn_div {
+    margin-top: 50px;
+}
+
+.enter_btn:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
+    transition: all 0.15s ease;
+}
+
+.register_acc_div {
+    margin-top: 50px;
+}
+
+.register_login {
+    width: 280px;
+    padding-left: 20px;
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.register_login:focus {
+    outline: none;
+}
+
+.register_email {
+    width: 280px;
+    padding-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.register_email:focus {
+    outline: none;
+}
+
+.register_password_first {
+    width: 280px;
+    padding-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.register_password_first:focus {
+    outline: none;
+}
+
+.register_password_second {
+    width: 280px;
+    padding-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.register_password_second:focus {
+    outline: none;
+}
+
+.register_title {
+    margin-top: 10px;
+    color: rgb(41, 62, 123);
+    font-size: 35px;
+}
+
+.register_btn {
+    width: 100px;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(20, 43, 111);
+    color: white;
+    font-size: 24px;
+}
+
+.register_btn_div {
+    margin-top: 50px;
+}
+
+.register_btn:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
+    transition: all 0.15s ease;
+}
+
+.have_acc_enter_div {
+    margin-top: 10px;
+}
+
+.have_acc_enter {
+    margin-top: 10px;
+    color: rgb(41, 62, 123);
+    font-size: 16px;
+}
+
+.add_new_task_div {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.add_new_task {
+    margin-left: 10px;
+    color: white;
+    background-color: rgb(39, 60, 122);
+    border-radius: 5px;
+    padding-left: 142px;
+    padding-right: 142px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.add_new_task:hover {
+    background-color: white;
+    color: rgb(20, 43, 111);
+    border: 3px solid rgb(39, 60, 122);
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+
+#add_new_task_blackout {
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+#add_new_task_window {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0px 10px rgba(20, 43, 111, 1), 0 0px 10px rgba(20, 43, 111, 0.2);
+    border-radius: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: rgb(246, 246, 246);
+}
+
+
+.add_item_titel {
+    width: 280px;
+    padding-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.add_item_date {
+    padding-right: 10px;
+    width: 270px;
+    padding-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.add_new_task_title {
+    margin-top: 10px;
+    color: rgb(41, 62, 123);
+    font-size: 35px;
+}
+
+
+.add_item_submit_btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+    background-color: rgb(20, 43, 111);
+    color: white;
+    font-size: 24px;
+}
+
+.add_item_cansel_btn {
+    width: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(20, 43, 111);
+    color: white;
+    font-size: 24px;
+}
+
+.add_item_date:focus {
+    outline: none;
+}
+
+.add_item_titel:focus {
+    outline: none;
+}
+
+.add_item_submit_div {
+    margin-top: 25px;
+}
+
+.add_item_submit_btn:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
+    transition: all 0.15s ease;
+}
+
+#del_task_blackout {
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+#del_task_window {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0px 10px rgba(20, 43, 111, 1), 0 0px 10px rgba(20, 43, 111, 0.2);
+    border-radius: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: rgb(246, 246, 246);
+}
+
+
+.del_task_title {
+    margin-top: 10px;
+    color: rgb(41, 62, 123);
+    font-size: 35px;
+}
+
+.del_case {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.del_text_allign {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.del_item_submit_btn {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(20, 43, 111);
+    color: white;
+    font-size: 24px;
+}
+
+.del_item_cansel_btn {
+    width: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(20, 43, 111);
+    color: white;
+    font-size: 24px;
+}
+
+.del_item_submit_btn:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
+    transition: all 0.15s ease;
+}
+
+.del_item_cansel_btn:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
+    transition: all 0.15s ease;
+}
+
+#edit_task_blackout {
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+#edit_task_window {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0px 10px rgba(20, 43, 111, 1), 0 0px 10px rgba(20, 43, 111, 0.2);
+    border-radius: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: rgb(246, 246, 246);
+}
+
+
+.edit_task_title {
+    margin-top: 10px;
+    color: rgb(41, 62, 123);
+    font-size: 35px;
+}
+
+.edit_item_titel {
+    width: 280px;
+    padding-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.edit_item_date {
+    padding-right: 10px;
+    width: 270px;
+    padding-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.edit_item_submit_btn {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(20, 43, 111);
+    color: white;
+    font-size: 24px;
+}
+
+.edit_item_cansel_btn {
+    width: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(20, 43, 111);
+    color: white;
+    font-size: 24px;
+}
+
+.edit_item_submit_btn:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
+    transition: all 0.15s ease;
+}
+
+.edit_item_cansel_btn:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
+    transition: all 0.15s ease;
+}
+
+.edit_case {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.edit_item_titel:focus {
+    outline: none;
+}
+
+.edit_item_date:focus {
+    outline: none;
+}

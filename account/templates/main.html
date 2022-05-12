@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <title>main</title>
+</head>
+
+<body>
+<div class="header">
+    <h1 class="logo_text">SPACEWORK</h1>
+    <div class="ent_reg">
+        <p class="enter">Hello, {{ request.user }}</p>
+        <a class="register" href="{% url 'logout' %}">выход</a>
+    </div>
+</div>
+
+<div class="mainspace">
+    <div class="menu">
+        <p class="menu_name">Меню</p>
+        <div class="menu_title">
+            {% block nav %}
+                {% for work_field in work_fields %}
+                    <div>
+                        <a href="{% url 'main_active' work_field.pk %}">
+                            <p class="space_name">
+                                {{ work_field.title }}
+                            </p>
+                        </a>
+                        <a href="{% url 'edite_work_field' work_field.pk %}">edit</a>
+                        <a href="{% url 'delete_work_field' work_field.pk %}">delete</a>
+                    </div>
+
+                {% endfor %}
+                {% block add_work_field %}
+                    <a href="{% url 'add_work_field'%}">
+                        <p class="space_name">
+                            Добавить поле
+                        </p>
+                    </a>
+                {% endblock %}
+            {% endblock %}
+
+
+        </div>
+    </div>
+
+    <div class="space">
+        {% block content %}
+            <h1>Выберите пространство</h1>
+        {% endblock %}
+    </div>
+</div>
+{% block window %}
+{% endblock %}
+{% block script %}
+
+{% endblock %}
+</body>
+
+</html>

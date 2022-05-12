@@ -1,0 +1,63 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    {% for task_field in task_fields %}
+        <div class="left_list">
+            <p class="list_title">{{ task_field.title }}</p>
+            {% for task in tasks %}
+                {% if task.taskField == task_field %}
+                    <div class="item">
+                        <div class="item_data">
+                            <div class="item_top">
+                                <div class="top_btns">
+                                    <button class="delete_btn">
+                                        <img src="/img/delete_bin.png" width="32" height="32">
+                                    </button>
+                                    <button class="edit_btn">
+                                        <img src="/img/edit.png" width="32" height="32">
+                                    </button>
+                                </div>
+                                <p class="item_title">
+                                    {{ task.title }}
+                                <p>
+                            </div>
+                        </div>
+
+                        <div class="item_bot">
+                            <p class="date">{{ task.created }}</p>
+                            <input type="checkbox" class="isDone">
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <div class="item">
+                <a href="">
+                    Add new task
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block window %}
+    <div id="del_task_blackout">
+        <form method="POST">
+            {% csrf_token %}
+            <div id="del_task_window">
+                <p class="del_task_title">Удаление</p>
+                <div class="del_text_allign">
+                    <p class="del_text">Вы уверены, что хотите удалить эту столбец?</p>
+                </div>
+                <div class="del_case">
+                    <div class="del_item_submit_div">
+                        <a class="del_item_cansel_btn" href="{% url 'main_active' work_field %}">Отмена</a>
+                    </div>
+                    <div class="del_item_submit_div">
+                        <input type="submit" value="Удалить" class="del_item_submit_btn">
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+{% endblock %}

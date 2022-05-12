@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+
+{% block nav %}
+    {% for work_field in work_fields %}
+        <div>
+            <a href="">
+                <p class="space_name">
+                    {{ work_field.title }}
+                </p>
+            </a>
+            <a href="">edit</a>
+            <a href="">delete</a>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
+{% block window %}
+    <form method="POST">
+        {% csrf_token %}
+        <div id="add_new_task_blackout">
+            <div id="add_new_task_window">
+                <p class="add_new_task_title">Добавить</p>
+                {{ form.title }}
+                <div class="add_item_submit_div">
+                    <a class="add_item_cansel_btn" href="{% url 'main' %}">Отмена</a>
+                    <input type="submit" value="save" class="add_item_submit_btn">
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}
+
+{% block script %}
+    <script>
+
+		//Query All input fields
+        let form_fields = document.getElementsByTagName('input');
+
+        form_fields[1].placeholder='Название области';
+
+        form_fields[1].className ="add_item_titel"
+	</script>
+{% endblock %}

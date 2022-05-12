@@ -1,0 +1,41 @@
+{% extends 'auth/main_for_auth.html' %}
+
+{% block register %}
+    <form method="POST">
+        {% csrf_token %}
+        <div id="register_blackout">
+            <div id="register_window">
+                <p class="register_title">Регистрация</p>
+                    {{ form.username }}
+                    {{ form.email }}
+                    {{ form.password1 }}
+                    {{ form.password2 }}
+                <div class="register_btn_div">
+                    <input class="register_btn" type="submit" value="Зарегистрироваться">
+                </div>
+                <div class="have_acc_enter_div">
+                    <a class="have_acc_enter" href="{% url 'login' %}">Есть аккаунт? Войти</a>
+                </div>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
+
+{% block script %}
+    <script>
+
+		//Query All input fields
+        let form_fields = document.getElementsByTagName('input');
+
+        form_fields[1].placeholder='Логин';
+		form_fields[2].placeholder='Email';
+		form_fields[3].placeholder='Пароль';
+		form_fields[4].placeholder='Повторите пароль';
+
+        form_fields[1].className ="register_login"
+        form_fields[2].className="register_email";
+		form_fields[3].className="register_password_first";
+		form_fields[4].className="register_password_second";
+	</script>
+{% endblock %}

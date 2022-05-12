@@ -1,0 +1,66 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    {% for task_field in task_fields %}
+        <div class="left_list">
+            <p class="list_title">{{ task_field.title }}</p>
+            {% for task in tasks %}
+                {% if task.taskField == task_field %}
+                    <div class="item">
+                        <div class="item_data">
+                            <div class="item_top">
+                                <div class="top_btns">
+                                    <button class="delete_btn">
+                                        <img src="/img/delete_bin.png" width="32" height="32">
+                                    </button>
+                                    <button class="edit_btn">
+                                        <img src="/img/edit.png" width="32" height="32">
+                                    </button>
+                                </div>
+                                <p class="item_title">
+                                    {{ task.title }}
+                                <p>
+                            </div>
+                        </div>
+
+                        <div class="item_bot">
+                            <p class="date">{{ task.created }}</p>
+                            <input type="checkbox" class="isDone">
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <div class="item">
+                <a href="">Add new task</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block window %}
+    <form method="POST">
+        {% csrf_token %}
+        <div id="add_new_task_blackout">
+            <div id="add_new_task_window">
+                <p class="add_new_task_title">Добавить</p>
+                {{ task_field_form.title }}
+                <div class="add_item_submit_div">
+                    <a class="add_item_cansel_btn" href="{% url 'main_active' work_field.pk %}">Отмена</a>
+                    <input type="submit" value="save" class="add_item_submit_btn">
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}
+
+{% block script %}
+    <script>
+
+		//Query All input fields
+        let form_fields = document.getElementsByTagName('input');
+
+        form_fields[1].placeholder='Название столбца';
+
+        form_fields[1].className ="add_item_titel"
+	</script>
+{% endblock %}

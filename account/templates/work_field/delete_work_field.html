@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% block window %}
+    <div id="del_task_blackout">
+        <form method="POST">
+            {% csrf_token %}
+            <div id="del_task_window">
+                <p class="del_task_title">Удаление</p>
+                <div class="del_text_allign">
+                    <p class="del_text">Вы уверены, что хотите удалить эту область?</p>
+                </div>
+                <div class="del_case">
+                    <div class="del_item_submit_div">
+                        <a class="del_item_cansel_btn" href="{% url 'main' %}">Отмена</a>
+                    </div>
+                    <div class="del_item_submit_div">
+                        <input type="submit" value="Удалить" class="del_item_submit_btn">
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+{% endblock %}

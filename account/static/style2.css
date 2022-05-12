@@ -51,8 +51,8 @@ body {
 
 
 .delete_btn {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     float: right;
     margin: 0px;
     margin-right: 3px;
@@ -111,7 +111,6 @@ body {
 .isDone:hover {
     cursor: pointer;
     border: 3px solid rgb(48, 68, 127);
-    border-width: 3px;
 }
 
 
@@ -134,50 +133,6 @@ body {
     font-size: 60px;
     padding-left: 300px;
     padding-right: 20px;
-}
-
-.enter {
-    margin-right: 10px;
-    color: white;
-    background-color: rgb(39, 60, 122);
-    border-radius: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 3px;
-}
-
-.header_username {
-    margin-right: 10px;
-    color: white;
-    background-color: rgb(39, 60, 122);
-    border-radius: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 3px;
-}
-
-.enter:hover {
-    background-color: white;
-    color: rgb(20, 43, 111);
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.register {
-    margin-right: 10px;
-    color: white;
-    background-color: rgb(39, 60, 122);
-    border-radius: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 3px;
-}
-
-.register:hover {
-    background-color: white;
-    color: rgb(20, 43, 111);
-    transition: all 0.2s ease;
-    cursor: pointer;
 }
 
 .ent_reg {
@@ -315,77 +270,6 @@ body {
     font-size: 35px;
 }
 
-.enter_save_remember {
-    margin-top: 10px;
-    display: flex;
-}
-
-.saveme_cb {
-    height: 20px;
-    width: 20px;
-    margin-right: 5px;
-}
-
-.saveme_cb:hover {
-    cursor: pointer;
-}
-
-#saveme_text {
-    padding-top: 2px;
-    font-size: 16px;
-}
-
-#saveme_text:hover {
-    cursor: pointer;
-}
-
-.forgot_password {
-    color: rgb(41, 62, 123);
-    margin-left: 25px;
-    padding-top: 2px;
-    font-size: 16px;
-}
-
-.register_title {
-    margin-top: 10px;
-    color: rgb(41, 62, 123);
-    font-size: 35px;
-}
-
-.have_acc_enter_div {
-    margin-top: 10px;
-}
-
-.have_acc_enter {
-    margin-top: 10px;
-    color: rgb(41, 62, 123);
-    font-size: 16px;
-}
-
-.add_new_task_div {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.add_new_task {
-    margin-left: 10px;
-    color: white;
-    background-color: rgb(39, 60, 122);
-    border-radius: 5px;
-    padding-left: 142px;
-    padding-right: 142px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.add_new_task:hover {
-    background-color: white;
-    color: rgb(20, 43, 111);
-    border: 3px solid rgb(39, 60, 122);
-    transition: all 0.1s ease;
-    cursor: pointer;
-}
-
 #add_new_task_blackout {
     backdrop-filter: blur(3px);
     width: 100%;
@@ -410,75 +294,6 @@ body {
     left: 0;
     margin: auto;
     background: rgb(246, 246, 246);
-}
-
-
-.add_item_titel {
-    width: 280px;
-    padding-left: 20px;
-    margin-top: 10px;
-    height: 50px;
-    border-radius: 10px;
-    border: 0px;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
-}
-
-.add_item_date {
-    padding-right: 10px;
-    width: 270px;
-    padding-left: 20px;
-    margin-top: 10px;
-    height: 50px;
-    border-radius: 10px;
-    border: 0px;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
-}
-
-.add_new_task_title {
-    margin-top: 10px;
-    color: rgb(41, 62, 123);
-    font-size: 35px;
-}
-
-
-.add_item_submit_btn {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-radius: 5px;
-    background-color: rgb(20, 43, 111);
-    color: white;
-    font-size: 24px;
-}
-
-.add_item_cansel_btn {
-    width: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-    background-color: rgb(20, 43, 111);
-    color: white;
-    font-size: 24px;
-}
-
-.add_item_date:focus {
-    outline: none;
-}
-
-.add_item_titel:focus {
-    outline: none;
-}
-
-.add_item_submit_div {
-    margin-top: 25px;
-}
-
-.add_item_submit_btn:hover {
-    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
-    transition: all 0.15s ease;
 }
 
 #del_task_blackout {
@@ -507,13 +322,6 @@ body {
     background: rgb(246, 246, 246);
 }
 
-
-.del_task_title {
-    margin-top: 10px;
-    color: rgb(41, 62, 123);
-    font-size: 35px;
-}
-
 .case {
     margin-top: 20px;
     display: flex;
@@ -523,40 +331,6 @@ body {
 .del_text_allign {
     margin-top: 10px;
     text-align: left;
-}
-
-.del_item_submit_btn {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-    background-color: rgb(20, 43, 111);
-    color: white;
-    font-size: 24px;
-}
-
-.del_item_cansel_btn {
-
-    width: 100px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-    background-color: rgb(20, 43, 111);
-    color: white;
-    font-size: 24px;
-}
-
-.del_item_submit_btn:hover {
-    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
-    transition: all 0.15s ease;
-}
-
-.del_item_cansel_btn:hover {
-    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
-    transition: all 0.15s ease;
 }
 
 #edit_task_blackout {
@@ -583,81 +357,6 @@ body {
     left: 0;
     margin: auto;
     background: rgb(246, 246, 246);
-}
-
-
-.edit_task_title {
-    margin-top: 10px;
-    color: rgb(41, 62, 123);
-    font-size: 35px;
-}
-
-.edit_item_titel {
-    width: 280px;
-    padding-left: 20px;
-    margin-top: 10px;
-    height: 50px;
-    border-radius: 10px;
-    border: 0px;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
-}
-
-.edit_item_date {
-    padding-right: 10px;
-    width: 270px;
-    padding-left: 20px;
-    margin-top: 10px;
-    height: 50px;
-    border-radius: 10px;
-    border: 0px;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
-}
-
-.edit_item_submit_btn {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-    background-color: rgb(20, 43, 111);
-    color: white;
-    font-size: 24px;
-}
-
-.edit_item_cansel_btn {
-    width: 100px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-    background-color: rgb(20, 43, 111);
-    color: white;
-    font-size: 24px;
-}
-
-.edit_item_submit_btn:hover {
-    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
-    transition: all 0.15s ease;
-}
-
-.edit_item_cansel_btn:hover {
-    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
-    transition: all 0.15s ease;
-}
-
-.edit_case {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.edit_item_titel:focus {
-    outline: none;
-}
-
-.edit_item_date:focus {
-    outline: none;
 }
 
 .cool_btn {

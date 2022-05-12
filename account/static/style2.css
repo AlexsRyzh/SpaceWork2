@@ -800,3 +800,7 @@ body {
 .edit_item_date:focus {
     outline: none;
 }
+
+.item_title_white {
+    overflow: auto;
+}

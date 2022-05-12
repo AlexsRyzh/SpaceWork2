@@ -33,11 +33,12 @@
                 {% endif %}
             {% endfor %}
             <div class="add_task_btn">
-                <a class="white_text" href="{% url 'add_task' work_field.pk task_field.pk %}">Add new task</a>
+                <a class="white_text" href="{% url 'add_task' work_field.pk task_field.pk %}">Добавить задание</a>
             </div>
+            <div class="footer"></div>
         </div>
     {% endfor %}
-    <div class="left_list">
-        <p class="list_title"><a class="list_title" href="{% url 'add_task_field' work_field.pk %}">Add new task</a></p>
+    <div class="rigth_space">
+        <p class="list_title"><a class="list_title" href="{% url 'add_task_field' work_field.pk %}">Добавить пространство</a></p>
     </div>
 {% endblock %}

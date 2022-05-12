@@ -145,13 +145,12 @@ body {
 
 
 .space {
-    margin-top: 40px;
     position: absolute;
     margin-left: 300px;
     width: calc(100% - 240px);
     display: flex;
     overflow-x: auto;
-    height: calc(100% - 110px);
+    height: calc(100% - 70px);
 }
 
 .left_list {
@@ -175,6 +174,7 @@ body {
 }
 
 .list_title {
+    margin-top: 40px;
     color: rgb(48, 68, 127);
     text-align: center;
     font-size: 35px;
@@ -446,7 +446,6 @@ body {
     border-radius: 15px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 3px;
 }
 
 .header_btn:hover {
@@ -454,4 +453,14 @@ body {
     color: rgb(20, 43, 111);
     transition: all 0.2s ease;
     cursor: pointer;
+}
+
+.footer {
+    height: 40px;
+}
+
+.rigth_space {
+    width: 200px;
+    padding-right: 100px;
+    margin-left: 130px;
 }

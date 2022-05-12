@@ -45,13 +45,15 @@
             {% csrf_token %}
             <div id="edit_task_window">
                 <p class="edit_task_title">Редактирование</p>
-                {{ task_field_form.title }}
-                <div class="edit_case">
-                    <div class="edit_item_submit_div">
-                        <a class="edit_item_cansel_btn" href="{% url 'main_active' work_field %}">Отмена</a>
+                <div class="cool_text_input">
+                    {{ task_field_form.title}}
+                </div>
+                <div class="case">
+                    <div class="cool_btn">
+                        <a class="case_text" href="{% url 'main_active' work_field %}">Отмена</a>
                     </div>
-                    <div class="edit_item_submit_div">
-                        <input type="submit" class="edit_item_submit_btn" value="Изменить">
+                    <div class="cool_btn">
+                        <input type="submit" class="case_text" value="Изменить">
                     </div>
                 </div>
             </div>

@@ -5,14 +5,17 @@
         {% csrf_token %}
         <div id="enter_blackout">
             <div id="enter_window">
-                <p class="enter_title">Вход</p>
-                <input class="enter_login" type="text" placeholder="Логин" name="username">
-                <input class="enter_password" type="password" placeholder="Пароль" name = "password">
-                <div class="enter_btn_div">
-                    <input class="enter_btn" type="submit" value="Войти">
+                <p class="window_title">Вход</p>
+                <input class="cool_text_input" type="text" placeholder="Логин" name="username">
+                <input class="cool_text_input" type="password" placeholder="Пароль" name = "password">
+                <div class="case">
+                    <div class="cool_btn">
+                    <input class="case_text" type="submit" value="Войти">
                 </div>
-                <div class="register_acc_div">
-                    <a class="register_acc" href="{% url 'register' %}">Нет аккаунта? Зарегестрироваться</a>
+                </div>
+
+                <div class="case">
+                    <a class="window_bot" href="{% url 'register' %}">Нет аккаунта? Зарегестрироваться</a>
                 </div>
             </div>
         </div>

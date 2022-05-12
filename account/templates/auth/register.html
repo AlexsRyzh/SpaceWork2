@@ -5,16 +5,18 @@
         {% csrf_token %}
         <div id="register_blackout">
             <div id="register_window">
-                <p class="register_title">Регистрация</p>
+                <p class="window_title">Регистрация</p>
                     {{ form.username }}
                     {{ form.email }}
                     {{ form.password1 }}
                     {{ form.password2 }}
-                <div class="register_btn_div">
-                    <input class="register_btn" type="submit" value="Зарегистрироваться">
+                <div class="case">
+                    <div class="cool_btn_resize">
+                        <input class="case_text" type="submit" value="Зарегистрироваться">
+                    </div>
                 </div>
-                <div class="have_acc_enter_div">
-                    <a class="have_acc_enter" href="{% url 'login' %}">Есть аккаунт? Войти</a>
+                <div class="case">
+                    <a class="window_bot" href="{% url 'login' %}">Есть аккаунт? Войти</a>
                 </div>
             </div>
         </div>
@@ -32,10 +34,10 @@
 		form_fields[2].placeholder='Email';
 		form_fields[3].placeholder='Пароль';
 		form_fields[4].placeholder='Повторите пароль';
-
-        form_fields[1].className ="register_login"
-        form_fields[2].className="register_email";
-		form_fields[3].className="register_password_first";
-		form_fields[4].className="register_password_second";
+        {#cool_text_input#}
+        form_fields[1].className ="cool_text_input"
+        form_fields[2].className="cool_text_input";
+		form_fields[3].className="cool_text_input";
+		form_fields[4].className="cool_text_input";
 	</script>
 {% endblock %}

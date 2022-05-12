@@ -9,12 +9,14 @@ a {
     color: black;
 }
 
+
 body {
     background-color: rgb(214, 214, 214);
     overflow-x: hidden;
 }
 
 .item {
+    min-height: 38px;
     margin-top: 10px;
     margin-left: 10px;
     border: 3px solid rgb(118, 131, 171);
@@ -38,24 +40,19 @@ body {
 
 .item_title {
     margin: 3px 3px 0px 5px;
+    word-wrap: break-word;
 }
 
-.delete_btn:before {
-    content: "";
-    position: absolute;
-    width: 32px;
-    height: 0;
+.delete_btn:hover {
     background: rgba(118, 131, 171, 0.24);
     border-radius: 5px;
-    transition: all 0s ease;
     cursor: pointer;
 }
 
-.delete_btn:hover:before {
-    height: 32px;
-}
 
 .delete_btn {
+    width: 36px;
+    height: 36px;
     float: right;
     margin: 0px;
     margin-right: 3px;
@@ -67,24 +64,19 @@ body {
     margin-bottom: -6px;
 }
 
-.edit_btn:before {
-    content: "";
-    position: absolute;
-    width: 32px;
-    height: 0;
+.edit_btn:hover {
     background: rgba(118, 131, 171, 0.24);
     border-radius: 5px;
-    transition: all 0s ease;
     cursor: pointer;
 }
 
-.edit_btn:hover:before {
-    height: 32px;
-}
 
 .edit_btn {
+    width: 36px;
+    height: 36px;
     float: right;
     margin: 0px;
+    margin-right: 3px;
     padding: 0px;
     outline: none;
     border: 0;
@@ -94,20 +86,21 @@ body {
 }
 
 .top_btns {
+    height: 38px;
     border: 3px solid rgb(118, 131, 171);
     float: right;
     margin-right: -3px;
     margin-top: -6px;
     margin-left: 3px;
-    width: 70px;
     border-radius: 10px;
 }
 
 .isDone {
+    margin-right: 3px;
+    margin-left: 2px;
+    margin-top: -2px;
     width: 36px;
     height: 36px;
-    margin-top: -1px;
-    margin-left: 207px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -275,7 +268,7 @@ body {
 
 #enter_window {
     width: 300px;
-    height: 370px;
+    height: 320px;
     text-align: center;
     padding: 15px;
     box-shadow: 0 0px 10px rgba(20, 43, 111, 1), 0 0px 10px rgba(20, 43, 111, 0.2);
@@ -301,7 +294,7 @@ body {
 
 #register_window {
     width: 300px;
-    height: 420px;
+    height: 440px;
     text-align: center;
     padding: 15px;
     box-shadow: 0 0px 10px rgba(20, 43, 111, 1), 0 0px 10px rgba(20, 43, 111, 0.2);
@@ -315,36 +308,9 @@ body {
     background: rgb(246, 246, 246);
 }
 
-.enter_login {
-    width: 280px;
-    padding-left: 20px;
-    margin-top: 20px;
-    height: 50px;
-    border-radius: 10px;
-    border: 0px;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
-}
-
-.enter_login:focus {
-    outline: none;
-}
-
-.enter_password {
-    width: 280px;
-    padding-left: 20px;
+.window_title {
     margin-top: 10px;
-    height: 50px;
-    border-radius: 10px;
-    border: 0px;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
-}
-
-.enter_password:focus {
-    outline: none;
-}
-
-.enter_title {
-    margin-top: 10px;
+    margin-bottom: 10px;
     color: rgb(41, 62, 123);
     font-size: 35px;
 }
@@ -380,118 +346,10 @@ body {
     font-size: 16px;
 }
 
-.register_acc {
-    margin-top: 10px;
-    color: rgb(41, 62, 123);
-    font-size: 16px;
-}
-
-.enter_btn {
-    width: 100px;
-    padding-left: 117px;
-    padding-right: 117px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-    background-color: rgb(20, 43, 111);
-    color: white;
-    font-size: 24px;
-}
-
-.enter_btn_div {
-    margin-top: 50px;
-}
-
-.enter_btn:hover {
-    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
-    transition: all 0.15s ease;
-}
-
-.register_acc_div {
-    margin-top: 50px;
-}
-
-.register_login {
-    width: 280px;
-    padding-left: 20px;
-    margin-top: 20px;
-    height: 50px;
-    border-radius: 10px;
-    border: 0px;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
-}
-
-.register_login:focus {
-    outline: none;
-}
-
-.register_email {
-    width: 280px;
-    padding-left: 20px;
-    margin-top: 10px;
-    height: 50px;
-    border-radius: 10px;
-    border: 0px;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
-}
-
-.register_email:focus {
-    outline: none;
-}
-
-.register_password_first {
-    width: 280px;
-    padding-left: 20px;
-    margin-top: 10px;
-    height: 50px;
-    border-radius: 10px;
-    border: 0px;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
-}
-
-.register_password_first:focus {
-    outline: none;
-}
-
-.register_password_second {
-    width: 280px;
-    padding-left: 20px;
-    margin-top: 10px;
-    height: 50px;
-    border-radius: 10px;
-    border: 0px;
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
-}
-
-.register_password_second:focus {
-    outline: none;
-}
-
 .register_title {
     margin-top: 10px;
     color: rgb(41, 62, 123);
     font-size: 35px;
-}
-
-.register_btn {
-    width: 100px;
-    padding-left: 38px;
-    padding-right: 38px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-    background-color: rgb(20, 43, 111);
-    color: white;
-    font-size: 24px;
-}
-
-.register_btn_div {
-    margin-top: 50px;
-}
-
-.register_btn:hover {
-    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
-    transition: all 0.15s ease;
 }
 
 .have_acc_enter_div {
@@ -656,7 +514,7 @@ body {
     font-size: 35px;
 }
 
-.del_case {
+.case {
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
@@ -679,6 +537,7 @@ body {
 }
 
 .del_item_cansel_btn {
+
     width: 100px;
     padding-left: 15px;
     padding-right: 15px;
@@ -801,6 +660,77 @@ body {
     outline: none;
 }
 
-.item_title_white {
-    overflow: auto;
+.cool_btn {
+    padding-top: 10px;
+    padding-bottom: 7px;
+    width: 130px;
+    border-radius: 5px;
+    background-color: rgb(20, 43, 111);
+    font-size: 24px;
+}
+
+.cool_btn:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
+    transition: all 0.15s ease;
+}
+
+.case_text {
+    color:white;
+    background-color: rgb(20, 43, 111);
+    border: 0px;
+}
+
+.cool_text_input {
+    width: 280px;
+    padding-left: 20px;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2), 0 0px 6px rgba(0, 0, 0, 0.2)
+}
+
+.cool_text_input:focus {
+    outline: none;
+}
+
+.white_text {
+    color: white;
+}
+
+.add_task_btn {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 13px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: rgb(20, 43, 111);
+    font-size: 24px;
+}
+
+.add_task_btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
+    transition: all 0.15s ease;
+}
+
+.window_bot {
+    margin-top: 10px;
+    color: rgb(41, 62, 123);
+    font-size: 16px;
+}
+
+.cool_btn_resize {
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border-radius: 5px;
+    background-color: rgb(20, 43, 111);
+    font-size: 24px;
+}
+
+.cool_btn_resize:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
+    transition: all 0.15s ease;
 }

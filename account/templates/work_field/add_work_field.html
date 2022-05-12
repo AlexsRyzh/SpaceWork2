@@ -22,9 +22,13 @@
             <div id="add_new_task_window">
                 <p class="add_new_task_title">Добавить</p>
                 {{ form.title }}
-                <div class="add_item_submit_div">
-                    <a class="add_item_cansel_btn" href="{% url 'main' %}">Отмена</a>
-                    <input type="submit" value="save" class="add_item_submit_btn">
+                <div class="case">
+                    <div class="cool_btn">
+                        <a class="case_text" href="{% url 'main' %}">Отмена</a>
+                    </div>
+                    <div class="cool_btn">
+                        <input type="submit" value="save" class="case_text">
+                    </div>
                 </div>
             </div>
         </div>
@@ -34,11 +38,11 @@
 {% block script %}
     <script>
 
-		//Query All input fields
+        //Query All input fields
         let form_fields = document.getElementsByTagName('input');
 
-        form_fields[1].placeholder='Название области';
+        form_fields[1].placeholder = 'Название области';
 
-        form_fields[1].className ="add_item_titel"
-	</script>
+        form_fields[1].className = "add_item_titel"
+    </script>
 {% endblock %}

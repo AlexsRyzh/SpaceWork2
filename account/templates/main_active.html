@@ -13,30 +13,28 @@
                             <div class="item_top">
                                 <div class="top_btns">
                                     <button class="delete_btn">
-                                        <img src="/img/delete_bin.png" width="32" height="32">
+                                        <img src="../static/img/delete_bin.png" width="35" height="35">
                                     </button>
                                     <button class="edit_btn">
-                                        <img src="/img/edit.png" width="32" height="32">
+                                        <img src="../static/img/edit.png" width="35" height="35">
                                     </button>
+                                    <div class="item_bot">
+                                        <input type="checkbox" class="isDone">
+                                    </div>
                                 </div>
-                                <div class="item_title_white">
-                                <p class="item_title">
-                                    {{ task.title }}
-                                <p>
+                                <div class="item_title">
+                                    <p>
+                                        {{ task.title }}
+                                    <p>
                                 </div>
-
                             </div>
-                        </div>
-
-                        <div class="item_bot">
-                            <input type="checkbox" class="isDone">
                         </div>
                     </div>
                 {% endif %}
             {% endfor %}
-             <div class="item">
-                 <a href="{% url 'add_task' work_field.pk task_field.pk %}">Add new task</a>
-             </div>
+            <div class="add_task_btn">
+                <a class="white_text" href="{% url 'add_task' work_field.pk task_field.pk %}">Add new task</a>
+            </div>
         </div>
     {% endfor %}
     <div class="left_list">

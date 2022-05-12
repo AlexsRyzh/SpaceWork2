@@ -672,12 +672,17 @@ body {
 .cool_btn:hover {
     box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
     transition: all 0.15s ease;
+    cursor: pointer;
 }
 
 .case_text {
     color:white;
     background-color: rgb(20, 43, 111);
     border: 0px;
+}
+
+.case_text:hover {
+    cursor: pointer;
 }
 
 .cool_text_input {
@@ -733,4 +738,21 @@ body {
 .cool_btn_resize:hover {
     box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 43, 111);
     transition: all 0.15s ease;
+    cursor: pointer;
+}
+.header_btn {
+    margin-right: 10px;
+    color: white;
+    background-color: rgb(39, 60, 122);
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+}
+
+.header_btn:hover {
+    background-color: white;
+    color: rgb(20, 43, 111);
+    transition: all 0.2s ease;
+    cursor: pointer;
 }

@@ -3,9 +3,11 @@
 {% block content %}
     {% for task_field in task_fields %}
         <div class="left_list">
+        <div class="list_top">
             <p class="list_title">{{ task_field.title }}</p>
-            <a href="{% url 'edite_task_field' work_field.pk task_field.pk %}">edit task_field |</a>
-            <a href="{% url 'delete_task_field' work_field.pk task_field.pk %}">delete task_field</a>
+            <a href="{% url 'edite_task_field' work_field.pk task_field.pk %}"><img src="../static/img/edit.png" width="35" height="35"></a>
+            <a href="{% url 'delete_task_field' work_field.pk task_field.pk %}"><img src="../static/img/delete_bin.png" width="35" height="35"></a>
+        </div>
             {% for task in tasks %}
                 {% if task.taskField == task_field %}
                     <div class="item">

@@ -51,8 +51,7 @@ body {
 
 
 .delete_btn {
-    width: 38px;
-    height: 38px;
+    height: 36px;
     float: right;
     margin: 0px;
     margin-right: 3px;
@@ -72,7 +71,6 @@ body {
 
 
 .edit_btn {
-    width: 36px;
     height: 36px;
     float: right;
     margin: 0px;
@@ -137,6 +135,7 @@ body {
 
 .ent_reg {
     display: flex;
+    align-items: center;
 }
 
 .mainspace {
@@ -147,7 +146,7 @@ body {
 .space {
     position: absolute;
     margin-left: 300px;
-    width: calc(100% - 240px);
+    width: calc(100% - 300px);
     display: flex;
     overflow-x: auto;
     height: calc(100% - 70px);
@@ -174,13 +173,17 @@ body {
 }
 
 .list_title {
-    margin-top: 40px;
+    width: 280px;
+    word-wrap: break-word;
     color: rgb(48, 68, 127);
     text-align: center;
     font-size: 35px;
 }
 
 .space_name {
+    margin-left: -16px;
+    word-wrap: break-word;
+    width: 230px;
     margin-bottom: 5px;
     text-align: center;
     font-size: 34px;
@@ -466,5 +469,36 @@ body {
 }
 
 .list_top {
-    margin-top: 100px;
+    margin-top: 40px;
+    flex-shrink: 0;
+    align-items: flex-start;
+    justify-content: space-between;
+    display: flex;
+    margin-left: 20px;
+}
+
+.menu_list_top {
+    margin-top: 5px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+
+    display: flex;
+    margin-left: 20px;
+}
+
+.add_space_btn {
+    margin-right: 5px;
+    margin-left: 5px;
+    word-wrap: break-word;
+    width: 290px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 34px;
+}
+
+.add_space_btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 15px;
 }

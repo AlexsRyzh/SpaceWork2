@@ -25,20 +25,27 @@
         <div class="menu_title">
             {% block nav %}
                 {% for work_field in work_fields %}
-                    <div>
+                    <div class="menu_list_top">
                         <a href="{% url 'main_active' work_field.pk %}">
                             <p class="space_name">
                                 {{ work_field.title }}
                             </p>
                         </a>
-                        <a href="{% url 'edite_work_field' work_field.pk %}">edit</a>
-                        <a href="{% url 'delete_work_field' work_field.pk %}">delete</a>
+                        <p class="edit_btn_mini">
+                            <a href="{% url 'edite_work_field' work_field.pk %}">
+                                <img src="../static/img/edit.png" width="28" height="28">
+                            </a>
+                        </p>
+                        <p class="delete_btn_mini">
+                            <a href="{% url 'delete_work_field' work_field.pk %}">
+                                <img src="../static/img/delete_X.svg" width="28" height="28">
+                            </a>
+                        </p>
                     </div>
-
                 {% endfor %}
                 {% block add_work_field %}
-                    <a href="{% url 'add_work_field'%}">
-                        <p class="space_name">
+                    <a href="{% url 'add_work_field' %}">
+                        <p class="add_space_btn">
                             Добавить поле
                         </p>
                     </a>

@@ -3,7 +3,13 @@
 {% block content %}
     {% for task_field in task_fields %}
         <div class="left_list">
-            <p class="list_title">{{ task_field.title }}</p>
+            <div class="list_top">
+                <a class="edit_btn" href=""><img
+                        src="../../static/img/edit.png" width="35" height="35"></a>
+                <p class="list_title">{{ task_field.title }}</p>
+                <a class="delete_btn" href=""><img
+                        src="../../static/img/delete_bin.png" width="35" height="35"></a>
+            </div>
             {% for task in tasks %}
                 {% if task.taskField == task_field %}
                     <div class="item">
@@ -11,43 +17,43 @@
                             <div class="item_top">
                                 <div class="top_btns">
                                     <button class="delete_btn">
-                                        <img src="/img/delete_bin.png" width="32" height="32">
+                                        <img src="../../static/img/delete_bin.png" width="35" height="35">
                                     </button>
                                     <button class="edit_btn">
-                                        <img src="/img/edit.png" width="32" height="32">
+                                        <img src="../../static/img/edit.png" width="35" height="35">
                                     </button>
                                 </div>
-                                <p class="item_title">
-                                    {{ task.title }}
-                                <p>
+                                <div class="item_title">
+                                    <p>
+                                        {{ task.title }}
+                                    <p>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="item_bot">
-                            <p class="date">{{ task.created }}</p>
-                            <input type="checkbox" class="isDone">
                         </div>
                     </div>
                 {% endif %}
             {% endfor %}
-            <div class="item">
-                <a href="">
-                    Add new task
-                </a>
+            <div class="add_task_btn">
+                <a class="white_text" href="">Добавить задание</a>
             </div>
+            <div class="footer"></div>
         </div>
     {% endfor %}
+    <div class="rigth_space">
+        <div class="list_top">
+            <p class="list_title"><a class="list_title" href="">Добавить
+                пространство</a></p>
+        </div>
+    </div>
 {% endblock %}
 
 {% block window %}
-   <div id="edit_task_blackout">
+    <div id="edit_task_blackout">
         <form method="POST">
             {% csrf_token %}
             <div id="edit_task_window">
                 <p class="window_title">Редактирование</p>
-                <div class="cool_text_input">
-                    {{ task_field_form.title}}
-                </div>
+                {{ task_field_form.title }}
                 <div class="case">
                     <div class="cool_btn">
                         <a class="case_text" href="{% url 'main_active' work_field %}">Отмена</a>
@@ -65,11 +71,11 @@
 {% block script %}
     <script>
 
-		//Query All input fields
+        //Query All input fields
         let form_fields = document.getElementsByTagName('input');
 
-        form_fields[1].placeholder='Название столбца';
+        form_fields[1].placeholder = 'Название столбца';
 
-        form_fields[1].className ="add_item_titel"
-	</script>
+        form_fields[1].className = "cool_text_input"
+    </script>
 {% endblock %}

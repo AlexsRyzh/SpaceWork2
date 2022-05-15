@@ -33,12 +33,12 @@
                         </a>
                         <p class="edit_btn_mini">
                             <a href="{% url 'edite_work_field' work_field.pk %}">
-                                <img src="../static/img/edit.png" width="28" height="28">
+                                <img src="{% static 'img/edit.png' %}" width="28" height="28">
                             </a>
                         </p>
                         <p class="delete_btn_mini">
                             <a href="{% url 'delete_work_field' work_field.pk %}">
-                                <img src="../static/img/delete_X.svg" width="28" height="28">
+                                <img src="{% static 'img/delete_X.svg' %}" width="28" height="28">
                             </a>
                         </p>
                     </div>

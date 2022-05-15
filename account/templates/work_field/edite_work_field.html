@@ -1,19 +1,5 @@
 {% extends 'main.html' %}
 
-{% block nav %}
-    {% for work_field in work_fields %}
-        <div>
-            <a href="">
-                <p class="space_name">
-                    {{ work_field.title }}
-                </p>
-            </a>
-            <a href="">edit</a>
-            <a href="">delete</a>
-        </div>
-    {% endfor %}
-{% endblock %}
-
 {% block window %}
     <div id="edit_task_blackout">
         <form method="POST">
@@ -38,11 +24,11 @@
 {% block script %}
     <script>
 
-		//Query All input fields
+        //Query All input fields
         let form_fields = document.getElementsByTagName('input');
 
-        form_fields[1].placeholder='Название области';
+        form_fields[1].placeholder = 'Название области';
 
-        form_fields[1].className ="add_item_titel"
-	</script>
+        form_fields[1].className = "cool_text_input"
+    </script>
 {% endblock %}

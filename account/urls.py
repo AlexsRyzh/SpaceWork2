@@ -23,6 +23,7 @@ urlpatterns = [
 
 
     #Main_task
-    path('<int:pk_work_field>/add_task/<int:pk_task_field>', views.addTaskPage, name = 'add_task')
-
+    path('<int:pk_work_field>/add_task/<int:pk_task_field>', views.addTaskPage, name = 'add_task'),
+    path('<int:pk_work_field>/task_field/<int:pk_task_field>/edit_task/<int:pk_task>',views.editTaskPage, name = 'edit_task'),
+    path('<int:pk_work_field>/task_field/<int:pk_task_field>/delete_task/<int:pk_task>', views.deleteTaskPage, name = 'delete_task')
 ]

@@ -16,15 +16,12 @@
                         <div class="item_data">
                             <div class="item_top">
                                 <div class="top_btns">
-                                    <button class="delete_btn">
+                                    <a class="delete_btn" href="{% url 'delete_task' work_field.pk task_field.pk task.pk %}">
                                         <img src="../static/img/delete_bin.png" width="35" height="35">
-                                    </button>
-                                    <button class="edit_btn">
+                                    </a>
+                                    <a class="edit_btn" href="{% url 'edit_task' work_field.pk task_field.pk task.pk %}">
                                         <img src="../static/img/edit.png" width="35" height="35">
-                                    </button>
-                                    <div class="item_bot">
-                                        <input type="checkbox" class="isDone">
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="item_title">
                                     <p>

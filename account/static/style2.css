@@ -363,6 +363,7 @@ body {
 }
 
 .cool_btn {
+    height: 34px;
     padding-top: 10px;
     padding-bottom: 7px;
     width: 130px;
@@ -378,6 +379,7 @@ body {
 }
 
 .case_text {
+    border-radius: 5px;
     color:white;
     background-color: rgb(20, 43, 111);
     border: 0px;

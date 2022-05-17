@@ -57,9 +57,11 @@
                     <p class="del_text">Вы уверены, что хотите удалить это задание?</p>
                 </div>
                 <div class="case">
-                    <div class="cool_btn">
-                        <a class="case_text" href="{% url 'main_active' work_field %}">Отмена</a>
-                    </div>
+                    <a class="case_text" href="{% url 'main_active' work_field %}">
+                        <div class="cool_btn">
+                            Отмена
+                        </div>
+                    </a>
                     <div class="cool_btn">
                         <input type="submit" value="Удалить" class="case_text">
                     </div>

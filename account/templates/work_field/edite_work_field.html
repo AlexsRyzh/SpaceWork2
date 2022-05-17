@@ -8,9 +8,9 @@
                 <p class="edit_task_title">Редактирование</p>
                 {{ form.title }}
                 <div class="case">
-                    <div class="cool_btn">
-                        <a class="case_text" href="{% url 'main' %}">Отмена</a>
-                    </div>
+                    <a class="case_text" href="{% url 'main' %}">
+                        <div class="cool_btn">Отмена</div>
+                    </a>
                     <div class="cool_btn">
                         <input type="submit" class="case_text" value="Изменить">
                     </div>

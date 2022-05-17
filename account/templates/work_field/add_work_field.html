@@ -9,9 +9,9 @@
                 <p class="add_new_task_title">Добавить</p>
                 {{ form.title }}
                 <div class="case">
-                    <div class="cool_btn">
-                        <a class="case_text" href="{% url 'main' %}">Отмена</a>
-                    </div>
+                    <a class="case_text" href="{% url 'main' %}">
+                        <div class="cool_btn">Отмена</div>
+                    </a>
                     <div class="cool_btn">
                         <input type="submit" value="save" class="case_text">
                     </div>

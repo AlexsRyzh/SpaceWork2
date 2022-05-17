@@ -7,7 +7,7 @@
         <div class="left_list">
             <div class="list_top">
                 <a class="edit_btn" href="">
-                    <img src="{% static 'img/edit.png'%}" width="35" height="35"></a>
+                    <img src="{% static 'img/edit.png' %}" width="35" height="35"></a>
                 <p class="list_title">{{ task_field.title }}</p>
                 <a class="delete_btn" href=""><img
                         src="{% static 'img/delete_bin.png' %}" width="35" height="35"></a>
@@ -19,7 +19,7 @@
                             <div class="item_top">
                                 <div class="top_btns">
                                     <button class="delete_btn">
-                                        <img src="{% static 'img/delete_bin.png'%}" width="35" height="35">
+                                        <img src="{% static 'img/delete_bin.png' %}" width="35" height="35">
                                     </button>
                                     <button class="edit_btn">
                                         <img src="{% static 'img/edit.png' %}" width="35" height="35">
@@ -57,9 +57,10 @@
                 <p class="window_title">Добавить</p>
                 {{ task_form.title }}
                 <div class="case">
-                    <div class="cool_btn">
-                        <a class="case_text" href="{% url 'main_active' work_field %}">Отмена</a>
-                    </div>
+                    <a class="case_text" href="{% url 'main_active' work_field %}">
+
+                        <div class="cool_btn">Отмена</div>
+                    </a>
                     <div class="cool_btn">
                         <input type="submit" value="Добавить" class="case_text">
                     </div>

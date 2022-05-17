@@ -33,9 +33,12 @@
                     </div>
                 {% endif %}
             {% endfor %}
-            <div class="add_task_btn">
-                <a class="white_text" href="{% url 'add_task' work_field.pk task_field.pk %}">Добавить задание</a>
-            </div>
+
+                <a class="white_text" href="{% url 'add_task' work_field.pk task_field.pk %}">
+                    <div class="add_task_btn">
+                        Добавить задание
+                    </div>
+                </a>
             <div class="footer"></div>
         </div>
     {% endfor %}
